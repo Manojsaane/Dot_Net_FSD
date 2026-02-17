@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <fieldset style="width:300px">
+    <legend>Register</legend>
+    <table>
+        <tr>
+            <td>id</td>
+            <td><input type="text" id="txtid" required pattern="M[0-9]{3}"
+                title="ID must be in the format M001, M002."
+                ></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" id="txtname" required pattern="[A-Za-z ]{3,}"
+                title="Name must be at least 3 characters long and contain only letters and spaces."></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" id="txtemail" required></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" id="txtpassword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number."></td>
+                <tr>    
+                    <td>Country</td>
+                    <td>
+                        <select id="country" required>
+                            <option value="">Select Country</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                            <option value="UK">UK</option>
+                            <option value="Australia">Australia</option>
+                        </select>
+                </tr>
+                <tr>
+                <td colspan="2"> Login Details</td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" id="txtusername" required pattern="[A-Za-z0-9]{5,}"
+                        title="Username must be at least 5 characters long and contain only letters and numbers."></td> 
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" id="txtloginpassword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number."></td>
+                </tr>
+                <tr>
+                    <td>
+                    <input type="submit" value="Register"></td>
+                    <td>
+                    <input type="reset" value="Reset"></td>
+                </tr>
+    </table>
+    </fieldset>
+</body>
+</html>
